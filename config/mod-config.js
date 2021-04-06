@@ -4,5 +4,13 @@ customTiers - these are auto-detected by the script, but you can set them here t
 excludeStandardTiers - set to true if you want only your custom tiers to show up for the format
 */
 const ModConfigData = {
+	ClientMods: {
+		adventures: {
+			excludeStandardTiers: true,
+		},
+		torchic: {
+			excludeStandardTiers: true,
+			},
+		},
 };
 exports.ModConfigData = ModConfigData;
