@@ -23,7 +23,7 @@ Config.defaultserver = {
 	port: 443,
 	httpport: 8000,
 	altport: 80,
-	registered: false
+	registered: true
 };
 
 Config.roomsFirstOpenScript = function () {
@@ -36,7 +36,7 @@ Config.customcolors = {
 Config.version = "0.11.2 (6f8a8dd9/b952f1af)";
 
 Config.routes = {
-	root: 'pokemonshowdown.com',
+	root: '24.184.93.50',
 	client: '24.184.93.50.psim.us',
 	dex: 'dex.pokemonshowdown.com',
 	replays: 'replay.pokemonshowdown.com',
