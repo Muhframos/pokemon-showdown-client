@@ -33,11 +33,11 @@ Config.customcolors = {
 	'zarel': 'aeo'
 };
 /*** Begin automatically generated configuration ***/
-Config.version = "0.11.2 (2139e992/b952f1af)";
+Config.version = "0.11.2 (d7a23237/b952f1af)";
 
 Config.routes = {
-	root: '24.184.93.50:8000',
-	client: 'adventures-showdown.herokuapp.com/',
+	root: '24.184.93.50.psim.us',
+	client: 'adventures-showdown.herokuapp.com',
 	dex: 'dex.pokemonshowdown.com',
 	replays: 'replay.pokemonshowdown.com',
 	users: 'pokemonshowdown.com/users',
