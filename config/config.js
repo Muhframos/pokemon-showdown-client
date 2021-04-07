@@ -19,9 +19,9 @@ Config.whitelist = [
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
 	id: 'showdown',
-	host: '24.184.93.50',
-	port: 443,
-	httpport: 8000,
+	host: '24.184.93.50.psim.us',
+	port: 8000,
+	httpport: 443,
 	altport: 80,
 	registered: true
 };
