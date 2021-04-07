@@ -37,7 +37,7 @@ Config.version = "0.11.2 (6f8a8dd9/b952f1af)";
 
 Config.routes = {
 	root: 'pokemonshowdown.com',
-	client: 'adventures-showdown.herokuapp.com',
+	client: 'play.pokemonshowdown.com',
 	dex: 'dex.pokemonshowdown.com',
 	replays: 'replay.pokemonshowdown.com',
 	users: 'pokemonshowdown.com/users',
