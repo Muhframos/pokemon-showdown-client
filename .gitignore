@@ -1,6 +1,7 @@
 /sprites/
 /audio/
 /config/*
+!/config/config.js
 !/config/mod-config.js
 /index.php
 /index.html
