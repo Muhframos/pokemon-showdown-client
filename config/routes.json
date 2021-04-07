@@ -1,6 +1,6 @@
 {
-    "root": "24.184.93.50.psim.us",
-    "client": "adventures-showdown.herokuapp.com",
+    "root": "24.184.93.50",
+    "client": "playpokemonshowdown.com",
     "dex": "dex.pokemonshowdown.com",
     "replays": "replay.pokemonshowdown.com",
     "users": "pokemonshowdown.com/users"
