@@ -19,11 +19,11 @@ Config.whitelist = [
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
 	id: 'showdown',
-	host: '24.184.93.50.psim.us',
+	host: '24.184.93.50',
 	port: 443,
 	httpport: 8000,
 	altport: 80,
-	registered: false
+	registered: true
 };
 
 Config.roomsFirstOpenScript = function () {
