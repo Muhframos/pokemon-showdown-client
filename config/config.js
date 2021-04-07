@@ -18,8 +18,8 @@ Config.whitelist = [
 // `defaultserver` specifies the server to use when the domain name in the
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
-	id: '24.184.93.50',
-	host: 'sim3.psim.us',
+	id: 'adventures',
+	host: '24.184.93.50.psim.us',
 	port: 443,
 	httpport: 8000,
 	altport: 80,
