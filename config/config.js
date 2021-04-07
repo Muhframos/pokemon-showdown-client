@@ -20,10 +20,10 @@ Config.whitelist = [
 Config.defaultserver = {
 	id: 'adventures',
 	host: '24.184.93.50.psim.us',
-	port: 8000,
-	httpport: 443,
+	port: 443,
+	httpport: 8000,
 	altport: 80,
-	registered: true
+	registered: false
 };
 
 Config.roomsFirstOpenScript = function () {
