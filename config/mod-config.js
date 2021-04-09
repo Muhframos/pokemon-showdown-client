@@ -7,9 +7,11 @@ const ModConfigData = {
 	ClientMods: {
 		adventures: {
 			excludeStandardTiers: true,
+			spriteGen: 8,
 		},
 		torchic: {
 			excludeStandardTiers: true,
+			 spriteGen: 8,
 			},
 		},
 };
