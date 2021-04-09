@@ -142,10 +142,10 @@ Config.whitelist = [
 // address bar is `Config.routes.client`.
 Config.defaultserver = {
 	id: 'adventures',
-	host: 'pokemon-adventures.herokuapp.com-80.psim.us',
-	port: 443,
-	httpport: 8000,
-	altport: 80,
+	host: 'pokemon-adventures.herokuapp.com-80',
+	port: 80,
+	httpport: 80,
+	altport: 8000,
 	registered: false,
 };
 
