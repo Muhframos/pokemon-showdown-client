@@ -1,2 +1,2 @@
-data\pokemon-showdown/.data-dist/*
-node_modules/*
+data\pokemon-showdown\.data-dist\*
+node_modules\*
