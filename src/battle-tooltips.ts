@@ -1041,6 +1041,9 @@ class BattleTooltips {
 			if (ability === 'sandrush' && weather === 'sandstorm') {
 				stats.spe *= 2;
 			}
+			if (this.battle.gen >= 1 && this.pokemonHasType(serverPokemon, 'Ice') && weather === 'hail') {
+				stats.spd = Math.floor(stats.def * 1.5);
+			}
 			if (ability === 'slushrush' && weather === 'hail') {
 				stats.spe *= 2;
 			}
@@ -1056,7 +1059,8 @@ class BattleTooltips {
 							let allyAbility = this.getAllyAbility(ally);
 							if (allyAbility === 'Flower Gift' && (ally.getSpecies().baseSpecies === 'Cherrim' || this.battle.gen <= 4)) {
 								stats.atk = Math.floor(stats.atk * 1.5);
-								stats.spd = Math.floor(stats.spd * 1.5);
+								stats.spd = Math.floor(stats.spe * 1.5);
+								stats.spd = Math.floor(stats.spa * 1.5);
 							}
 						}
 					}
@@ -1344,8 +1348,16 @@ class BattleTooltips {
 		value.reset(move.accuracy === true ? 0 : move.accuracy, true);
 
 		let pokemon = value.pokemon!;
-		if (move.id === 'toxic' && this.battle.gen >= 6 && this.pokemonHasType(pokemon, 'Poison')) {
+		if (move.id === 'toxic' && this.battle.gen >= 1 && this.pokemonHasType(pokemon, 'Poison')) {
 			value.set(0, "Poison type");
+			return value;
+		}
+		if (move.id === 'willowisp' && this.battle.gen >= 1 && this.pokemonHasType(pokemon, 'Fire')) {
+			value.set(0, "Fire type");
+			return value;
+		}
+		if (move.id === 'thunderwave' && this.battle.gen >= 6 && this.pokemonHasType(pokemon, 'Electric')) {
+			value.set(0, "Electric type");
 			return value;
 		}
 		if (move.id === 'blizzard') {
@@ -1390,7 +1402,7 @@ class BattleTooltips {
 		if (move.category === 'Physical') {
 			value.abilityModify(0.8, "Hustle");
 		}
-		value.abilityModify(1.3, "Compound Eyes");
+		value.abilityModify(1.5, "Compound Eyes");
 		for (const active of pokemon.side.active) {
 			if (!active || active.fainted) continue;
 			let ability = this.getAllyAbility(active);
@@ -1398,7 +1410,7 @@ class BattleTooltips {
 				value.modify(1.1, "Victory Star");
 			}
 		}
-		value.itemModify(1.1, "Wide Lens");
+		value.itemModify(1.5, "Wide Lens");
 		if (this.battle.hasPseudoWeather('Gravity')) {
 			value.modify(5 / 3, "Gravity");
 		}
@@ -1609,7 +1621,7 @@ class BattleTooltips {
 		if (this.battle.gen > 2 && serverPokemon.status === 'brn' && move.id !== 'facade' && move.category === 'Physical') {
 			if (!value.tryAbility("Guts")) value.modify(0.5, 'Burn');
 		}
-		if (['Rock', 'Ground', 'Steel'].includes(moveType) && this.battle.weather === 'sandstorm') {
+		if (['Rock', 'Ground', 'Steel'].includes(moveType)) {
 			if (value.tryAbility("Sand Force")) value.weatherModify(1.3, "Sandstorm", "Sand Force");
 		}
 		if (move.secondaries) {
@@ -1713,7 +1725,7 @@ class BattleTooltips {
 			value.modify(1.5, 'Expanding Force + Psychic Terrain boost');
 		}
 		if (move.id === 'mistyexplosion' && this.battle.hasPseudoWeather('Misty Terrain')) {
-			value.modify(1.5, 'Misty Explosion + Misty Terrain boost');
+			value.modify(2, 'Misty Explosion + Misty Terrain boost');
 		}
 		if (move.id === 'risingvoltage' && this.battle.hasPseudoWeather('Electric Terrain') && target?.isGrounded()) {
 			value.modify(2, 'Rising Voltage + Electric Terrain boost');
