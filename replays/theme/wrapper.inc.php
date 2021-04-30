@@ -24,12 +24,12 @@ function ThemeHeaderTemplate() {
 <?php } ?>
 
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE8" />
-	<link rel="stylesheet" href="//adventures-showdown.herokuapp.com/style/font-awesome.css?0.21474139580533635" />
-	<link rel="stylesheet" href="//pokemonshowdown.com/theme/panels.css?0.14669608711877946" />
-	<link rel="stylesheet" href="//pokemonshowdown.com/theme/main.css?0.3533901316174741" />
-	<link rel="stylesheet" href="//adventures-showdown.herokuapp.com/style/battle.css?0.7978676202386332" />
-	<link rel="stylesheet" href="//adventures-showdown.herokuapp.com/style/replay.css?0.4420304182538577" />
-	<link rel="stylesheet" href="//adventures-showdown.herokuapp.com/style/utilichart.css?0.5178549559706229" />
+	<link rel="stylesheet" href="//adventures-showdown.herokuapp.com/style/font-awesome.css?0.19317680560185613" />
+	<link rel="stylesheet" href="//pokemonshowdown.com/theme/panels.css?0.2863200009105582" />
+	<link rel="stylesheet" href="//pokemonshowdown.com/theme/main.css?0.7857354512043817" />
+	<link rel="stylesheet" href="//adventures-showdown.herokuapp.com/style/battle.css?0.6482474979029409" />
+	<link rel="stylesheet" href="//adventures-showdown.herokuapp.com/style/replay.css?0.1625879133518131" />
+	<link rel="stylesheet" href="//adventures-showdown.herokuapp.com/style/utilichart.css?0.6738078743550966" />
 
 	<!-- Workarounds for IE bugs to display trees correctly. -->
 	<!--[if lte IE 6]><style> li.tree { height: 1px; } </style><![endif]-->
@@ -53,11 +53,11 @@ function ThemeHeaderTemplate() {
 	<div class="pfx-topbar">
 		<div class="header">
 			<ul class="nav">
-				<li><a class="button nav-first<?php if ($panels->tab === 'home') echo ' cur'; ?>" href="//pokemonshowdown.com/?0.5809952472457347"><img src="//pokemonshowdown.com/images/pokemonshowdownbeta.png?0.48786013423944286" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
-				<li><a class="button<?php if ($panels->tab === 'pokedex') echo ' cur'; ?>" href="//dex.pokemonshowdown.com/?0.4140089161891549">Pok&eacute;dex</a></li>
-				<li><a class="button<?php if ($panels->tab === 'replay') echo ' cur'; ?>" href="/?0.30805067520937235">Replays</a></li>
-				<li><a class="button<?php if ($panels->tab === 'ladder') echo ' cur'; ?>" href="//pokemonshowdown.com/ladder/?0.1914984090945786">Ladder</a></li>
-				<li><a class="button nav-last" href="//pokemonshowdown.com/forums/?0.7704538977234991">Forum</a></li>
+				<li><a class="button nav-first<?php if ($panels->tab === 'home') echo ' cur'; ?>" href="//pokemonshowdown.com/?0.7868925689553559"><img src="//pokemonshowdown.com/images/pokemonshowdownbeta.png?0.49321295102049834" alt="Pok&eacute;mon Showdown! (beta)" /> Home</a></li>
+				<li><a class="button<?php if ($panels->tab === 'pokedex') echo ' cur'; ?>" href="//dex.pokemonshowdown.com/?0.15121562104596387">Pok&eacute;dex</a></li>
+				<li><a class="button<?php if ($panels->tab === 'replay') echo ' cur'; ?>" href="/?0.025490208739141762">Replays</a></li>
+				<li><a class="button<?php if ($panels->tab === 'ladder') echo ' cur'; ?>" href="//pokemonshowdown.com/ladder/?0.6305549747131245">Ladder</a></li>
+				<li><a class="button nav-last" href="//pokemonshowdown.com/forums/?0.5162279772582403">Forum</a></li>
 			</ul>
 			<ul class="nav nav-play">
 				<li><a class="button greenbutton nav-first nav-last" href="http://play.pokemonshowdown.com/">Play</a></li>
@@ -74,10 +74,10 @@ function ThemeHeaderTemplate() {
 
 function ThemeScriptsTemplate() {
 ?>
-	<script src="//adventures-showdown.herokuapp.com/js/lib/jquery-1.11.0.min.js?0.5398284783736182"></script>
-	<script src="//adventures-showdown.herokuapp.com/js/lib/lodash.core.js?0.22495561400287123"></script>
-	<script src="//adventures-showdown.herokuapp.com/js/lib/backbone.js?0.3538490427618093"></script>
-	<script src="//dex.pokemonshowdown.com/js/panels.js?0.8059936376935322"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/lib/jquery-1.11.0.min.js?0.9261330107048473"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/lib/lodash.core.js?0.7184493387412003"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/lib/backbone.js?0.7271364782335945"></script>
+	<script src="//dex.pokemonshowdown.com/js/panels.js?0.48825543430506224"></script>
 <?php
 }
 
@@ -86,21 +86,21 @@ function ThemeFooterTemplate() {
 ?>
 <?php $panels->scripts(); ?>
 
-	<script src="//adventures-showdown.herokuapp.com/js/lib/jquery-cookie.js?0.9449890130977541"></script>
-	<script src="//adventures-showdown.herokuapp.com/js/lib/html-sanitizer-minified.js?0.37316565225866816"></script>
-	<script src="//adventures-showdown.herokuapp.com/js/battle-sound.js?0.544672267982544"></script>
-	<script src="//adventures-showdown.herokuapp.com/config/config.js?0.5099516317208557"></script>
-	<script src="//adventures-showdown.herokuapp.com/js/battledata.js?0.39319389187547604"></script>
-	<script src="//adventures-showdown.herokuapp.com/data/pokedex-mini.js?0.08083259434608148"></script>
-	<script src="//adventures-showdown.herokuapp.com/data/pokedex-mini-bw.js?0.050397096666996655"></script>
-	<script src="//adventures-showdown.herokuapp.com/data/graphics.js?0.5053721187718878"></script>
-	<script src="//adventures-showdown.herokuapp.com/data/pokedex.js?0.9978210269322842"></script>
-	<script src="//adventures-showdown.herokuapp.com/data/items.js?0.8749320068938546"></script>
-	<script src="//adventures-showdown.herokuapp.com/data/moves.js?0.8585175253927284"></script>
-	<script src="//adventures-showdown.herokuapp.com/data/abilities.js?0.900732622791433"></script>
-	<script src="//adventures-showdown.herokuapp.com/data/teambuilder-tables.js?0.10921611201079107"></script>
-	<script src="//adventures-showdown.herokuapp.com/js/battle-tooltips.js?0.2246702634156228"></script>
-	<script src="//adventures-showdown.herokuapp.com/js/battle.js?0.5787912264310335"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/lib/jquery-cookie.js?0.32309372184310425"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/lib/html-sanitizer-minified.js?0.8353730419532683"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/battle-sound.js?0.5522933053109631"></script>
+	<script src="//adventures-showdown.herokuapp.com/config/config.js?0.72788547115947"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/battledata.js?0.0034698507931099076"></script>
+	<script src="//adventures-showdown.herokuapp.com/data/pokedex-mini.js?0.6105237188726329"></script>
+	<script src="//adventures-showdown.herokuapp.com/data/pokedex-mini-bw.js?0.2704512894054849"></script>
+	<script src="//adventures-showdown.herokuapp.com/data/graphics.js?0.8844466484669562"></script>
+	<script src="//adventures-showdown.herokuapp.com/data/pokedex.js?0.6654764474581774"></script>
+	<script src="//adventures-showdown.herokuapp.com/data/items.js?0.8685994848694878"></script>
+	<script src="//adventures-showdown.herokuapp.com/data/moves.js?0.8277204818539607"></script>
+	<script src="//adventures-showdown.herokuapp.com/data/abilities.js?0.3781168970557922"></script>
+	<script src="//adventures-showdown.herokuapp.com/data/teambuilder-tables.js?0.787879762521903"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/battle-tooltips.js?0.223329611272316"></script>
+	<script src="//adventures-showdown.herokuapp.com/js/battle.js?0.026460047040362644"></script>
 	<script src="/js/replay.js?c81925c8"></script>
 
 </body></html>

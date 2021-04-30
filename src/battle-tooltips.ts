@@ -1042,7 +1042,7 @@ class BattleTooltips {
 				stats.spe *= 2;
 			}
 			if (this.battle.gen >= 1 && this.pokemonHasType(serverPokemon, 'Ice') && weather === 'hail') {
-				stats.spd = Math.floor(stats.def * 1.5);
+				stats.def = Math.floor(stats.def * 1.5);
 			}
 			if (ability === 'slushrush' && weather === 'hail') {
 				stats.spe *= 2;
@@ -1654,7 +1654,7 @@ class BattleTooltips {
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Refrigerate");
 			}
 			if (this.battle.gen > 6) {
-				value.abilityModify(1.2, "Normalize");
+				value.abilityModify(1.5, "Normalize");
 			}
 		}
 		if (move.flags['punch']) {
