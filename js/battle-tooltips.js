@@ -1267,8 +1267,8 @@ moveType=pokemonTypes[0];
 }
 
 var item=Dex.getItem(value.itemName);
-if(move.id==='multiattack'&&item.onMemory){
-if(value.itemModify(0))moveType=item.onMemory;
+if(move.id==='multiattack'){
+moveType=pokemonTypes[0];
 }
 if(move.id==='judgment'&&item.onPlate&&!item.zMoveType){
 if(value.itemModify(0))moveType=item.onPlate;
